@@ -85,7 +85,7 @@ const applySystemParametersToHomeDashboard = (store: Store<AppState>,
             }
           }
         }
-        if (isDefinedAndNotNull(params.mobileQrEnabled)) {
+        /*if (isDefinedAndNotNull(params.mobileQrEnabled)) {
           for (const widgetId of Object.keys(dashboard.configuration.widgets)) {
             if (dashboard.configuration.widgets[widgetId].config.title === 'Select show mobile QR code') {
               dashboard.configuration.widgets[widgetId].config.settings.markdownTextFunction =
@@ -94,7 +94,7 @@ const applySystemParametersToHomeDashboard = (store: Store<AppState>,
               break;
             }
           }
-        }
+        }*/
         dashboard.hideDashboardToolbar = true;
         return dashboard;
       })

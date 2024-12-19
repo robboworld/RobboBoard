@@ -55,7 +55,7 @@ $tb-mat-indigo: (
 );
 
 $tb-primary: mat.define-palette($tb-mat-indigo);
-$tb-accent: mat.define-palette(mat.$deep-orange-palette);
+$tb-accent: mat.define-palette(mat.$grey-palette);
 
 $background: (background: map_get(mat.$grey-palette, 200));
 

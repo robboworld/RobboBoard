@@ -39,13 +39,13 @@ import java.util.Set;
         name = "switch", customRelations = true,
         relationTypes = {},
         configClazz = TbJsSwitchNodeConfiguration.class,
-        nodeDescription = "Routes incoming message to one OR multiple output connections.",
-        nodeDetails = "Node executes configured TBEL(recommended) or JavaScript function that returns array of strings (connection names). " +
-                "If Array is empty - message not routed to next Node. " +
-                "Message payload can be accessed via <code>msg</code> property. For example <code>msg.temperature < 10;</code><br/>" +
-                "Message metadata can be accessed via <code>metadata</code> property. For example <code>metadata.customerName === 'John';</code><br/>" +
-                "Message type can be accessed via <code>msgType</code> property.<br><br>" +
-                "Output connections: <i>Custom connection(s) defined by switch node</i> or <code>Failure</code>",
+        nodeDescription = "Направляет входящее сообщение на одно ИЛИ несколько выходных соединений.",
+        nodeDetails = "Узел выполняет настроенную функцию TBEL (рекомендуется) или JavaScript, которая возвращает массив строк (имена подключений). " +
+"Если массив пуст - сообщение не направляется на следующий узел. " +
+"Доступ к полезной нагрузке сообщения возможен через свойство <code>msg</code>. Например, <code>msg.temperature < 10;</code><br/>" +
+"Доступ к метаданным сообщения возможен через свойство <code>metadata</code>. Например, <code>metadata.customerName === 'John';</code><br/>" +
+"Доступ к типу сообщения возможен через свойство <code>msgType</code>.<br><br>" +
+"Выходные соединения: <i>Пользовательские соединения, определенные узлом коммутатора</i> или <code>Сбой</code>",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbFilterNodeSwitchConfig")
 public class TbJsSwitchNode implements TbNode {

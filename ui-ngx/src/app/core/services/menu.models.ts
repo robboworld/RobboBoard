@@ -448,7 +448,7 @@ export const menuSectionMap = new Map<MenuId, MenuSection>([
       icon: 'track_changes'
     }
   ],
-  [
+  /*[
     MenuId.alarms,
     {
       id: MenuId.alarms,
@@ -457,7 +457,7 @@ export const menuSectionMap = new Map<MenuId, MenuSection>([
       path: '/alarms',
       icon: 'mdi:alert-outline'
     }
-  ],
+  ],*/
   [
     MenuId.dashboards,
     {
@@ -718,7 +718,7 @@ const defaultUserMenuMap = new Map<Authority, MenuReference[]>([
     Authority.TENANT_ADMIN,
     [
       {id: MenuId.home},
-      {id: MenuId.alarms},
+      //{id: MenuId.alarms},
       {id: MenuId.dashboards},
       {
         id: MenuId.entities,
@@ -798,7 +798,7 @@ const defaultUserMenuMap = new Map<Authority, MenuReference[]>([
     Authority.CUSTOMER_USER,
     [
       {id: MenuId.home},
-      {id: MenuId.alarms},
+      //{id: MenuId.alarms},
       {id: MenuId.dashboards},
       {
         id: MenuId.entities,

@@ -1123,7 +1123,7 @@
     },
     "dashboard": {
         "dashboard": "Дашборд",
-        "dashboards": "Архив данных",
+        "dashboards": "Модули",
         "management": "Управление дашбордами",
         "view-dashboards": "Просмотреть дашборды",
         "add": "Добавить дашборд",
@@ -8014,7 +8014,7 @@
           "pe-feature-tooltip": "Только на RobboBoard\nProfessional Edition",
           "switch-to-pe": "Переключиться на PE",
           "alarms": "Оповещения",
-          "dashboards": "Архив данных",
+          "dashboards": "Модули",
           "entities-and-relations": "Сущности и отношения",
           "profiles": "Профили",
           "advanced-features": "Дополнительные возможности",

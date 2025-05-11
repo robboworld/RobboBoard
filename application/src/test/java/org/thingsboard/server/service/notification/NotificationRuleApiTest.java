@@ -182,9 +182,9 @@ public class NotificationRuleApiTest extends AbstractNotificationApiTest {
 
     @Test
     public void testNotificationRuleProcessing_alarmTrigger() throws Exception {
-        String notificationSubject = "Alarm type: ${alarmType}, status: ${alarmStatus}, " +
-                "severity: ${alarmSeverity}, deviceId: ${alarmOriginatorId}";
-        String notificationText = "Status: ${alarmStatus}, severity: ${alarmSeverity}";
+        String notificationSubject = "Тип ошибки: ${alarmType}, статус: ${alarmStatus}, " +
+                "уровегь: ${alarmSeverity}, deviceId: ${alarmOriginatorId}";
+        String notificationText = "Статус: ${alarmStatus}, уровень: ${alarmSeverity}";
         NotificationTemplate notificationTemplate = createNotificationTemplate(NotificationType.ALARM, notificationSubject, notificationText, NotificationDeliveryMethod.WEB);
 
         NotificationRule notificationRule = new NotificationRule();
@@ -239,9 +239,9 @@ public class NotificationRuleApiTest extends AbstractNotificationApiTest {
             double actualDelay = (double) (notification.getCreatedTime() - ts) / 1000;
             assertThat(actualDelay).isCloseTo(expectedDelay, offset(2.0));
 
-            assertThat(notification.getSubject()).isEqualTo("Alarm type: " + alarmType + ", status: " + AlarmStatus.ACTIVE_UNACK + ", " +
-                    "severity: " + AlarmSeverity.CRITICAL.toString().toLowerCase() + ", deviceId: " + device.getId());
-            assertThat(notification.getText()).isEqualTo("Status: " + AlarmStatus.ACTIVE_UNACK + ", severity: " + AlarmSeverity.CRITICAL.toString().toLowerCase());
+            assertThat(notification.getSubject()).isEqualTo("Тип ошибки: " + alarmType + ", статус: " + AlarmStatus.ACTIVE_UNACK + ", " +
+                    "уровень: " + AlarmSeverity.CRITICAL.toString().toLowerCase() + ", deviceId: " + device.getId());
+            assertThat(notification.getText()).isEqualTo("Статус: " + AlarmStatus.ACTIVE_UNACK + ", уровень: " + AlarmSeverity.CRITICAL.toString().toLowerCase());
 
             assertThat(notification.getType()).isEqualTo(NotificationType.ALARM);
             assertThat(notification.getInfo()).isInstanceOf(AlarmNotificationInfo.class);
@@ -259,9 +259,9 @@ public class NotificationRuleApiTest extends AbstractNotificationApiTest {
         clients.values().forEach(wsClient -> {
             wsClient.waitForUpdate(true);
             Notification updatedNotification = wsClient.getLastDataUpdate().getUpdate();
-            assertThat(updatedNotification.getSubject()).isEqualTo("Alarm type: " + alarmType + ", status: " + expectedStatus + ", " +
-                    "severity: " + expectedSeverity.toString().toLowerCase() + ", deviceId: " + device.getId());
-            assertThat(updatedNotification.getText()).isEqualTo("Status: " + expectedStatus + ", severity: " + expectedSeverity.toString().toLowerCase());
+            assertThat(updatedNotification.getSubject()).isEqualTo("Тип ошибки: " + alarmType + ", статус: " + expectedStatus + ", " +
+                    "уровень: " + expectedSeverity.toString().toLowerCase() + ", deviceId: " + device.getId());
+            assertThat(updatedNotification.getText()).isEqualTo("Статус: " + expectedStatus + ", уровень: " + expectedSeverity.toString().toLowerCase());
 
             wsClient.close();
         });

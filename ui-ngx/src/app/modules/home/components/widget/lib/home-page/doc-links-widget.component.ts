@@ -37,11 +37,11 @@ const defaultDocLinksMap = new Map<Authority, DocumentationLinks>(
   [
     [Authority.SYS_ADMIN, {
       links: [
-        {
+        /*{
           icon: 'rocket',
           name: 'Getting started',
           link: 'https://thingsboard.io/docs/getting-started-guides/helloworld/'
-        },
+        },*/
         {
           icon: 'title',
           name: 'Tenant profiles',
@@ -61,11 +61,11 @@ const defaultDocLinksMap = new Map<Authority, DocumentationLinks>(
     }],
     [Authority.TENANT_ADMIN, {
       links: [
-        {
+        /*{
           icon: 'rocket',
           name: 'Getting started',
           link: 'https://thingsboard.io/docs/getting-started-guides/helloworld/'
-        },
+        },*/
         {
           icon: 'settings_ethernet',
           name: 'Rule engine',
@@ -85,11 +85,11 @@ const defaultDocLinksMap = new Map<Authority, DocumentationLinks>(
     }],
     [Authority.CUSTOMER_USER, {
       links: [
-        {
+        /*{
           icon: 'rocket',
           name: 'Getting started',
           link: 'https://thingsboard.io/docs/getting-started-guides/helloworld/'
-        }
+        }*/
       ]
     }]
   ]

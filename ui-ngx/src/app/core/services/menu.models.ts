@@ -488,7 +488,7 @@ export const menuSectionMap = new Map<MenuId, MenuSection>([
       icon: 'devices_other'
     }
   ],
-  [
+  /*[
     MenuId.assets,
     {
       id: MenuId.assets,
@@ -497,8 +497,8 @@ export const menuSectionMap = new Map<MenuId, MenuSection>([
       path: '/entities/assets',
       icon: 'domain'
     }
-  ],
-  [
+  ],*/
+  /*[
     MenuId.entity_views,
     {
       id: MenuId.entity_views,
@@ -507,7 +507,7 @@ export const menuSectionMap = new Map<MenuId, MenuSection>([
       path: '/entities/entityViews',
       icon: 'view_quilt'
     }
-  ],
+  ],*/
   [
     MenuId.profiles,
     {
@@ -724,8 +724,8 @@ const defaultUserMenuMap = new Map<Authority, MenuReference[]>([
         id: MenuId.entities,
         pages: [
           {id: MenuId.devices},
-          {id: MenuId.assets},
-          {id: MenuId.entity_views}
+          /*{id: MenuId.assets},*/
+          /*{id: MenuId.entity_views}*/
         ]
       },
       {
@@ -804,8 +804,8 @@ const defaultUserMenuMap = new Map<Authority, MenuReference[]>([
         id: MenuId.entities,
         pages: [
           {id: MenuId.devices},
-          {id: MenuId.assets},
-          {id: MenuId.entity_views}
+          //{id: MenuId.assets},
+          //{id: MenuId.entity_views}
         ]
       },
       {id: MenuId.edge_instances},

@@ -57,7 +57,7 @@ export class PhoneInputComponent implements OnInit, ControlValueAccessor, Valida
   disabled: boolean;
 
   @Input()
-  defaultCountry = 'US';
+  defaultCountry = 'RU';
 
   @Input()
   enableFlagsSelect = true;
@@ -82,7 +82,7 @@ export class PhoneInputComponent implements OnInit, ControlValueAccessor, Valida
   }
 
   allCountries: Array<Country> = this.countryCodeData.allCountries;
-  phonePlaceholder = '+12015550123';
+  phonePlaceholder = '+78015550123';
   flagIcon: string;
   phoneFormGroup: UntypedFormGroup;
 

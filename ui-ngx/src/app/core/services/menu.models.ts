@@ -800,15 +800,16 @@ const defaultUserMenuMap = new Map<Authority, MenuReference[]>([
       {id: MenuId.home},
       //{id: MenuId.alarms},
       {id: MenuId.dashboards},
-      {
+      {id: MenuId.devices},
+      /*{
         id: MenuId.entities,
         pages: [
           {id: MenuId.devices},
           //{id: MenuId.assets},
           //{id: MenuId.entity_views}
         ]
-      },
-      {id: MenuId.edge_instances},
+      },*/
+      //{id: MenuId.edge_instances},
       {
         id: MenuId.notifications_center,
         pages: [
